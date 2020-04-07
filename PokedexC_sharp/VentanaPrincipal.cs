@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokedexC_sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,11 @@ namespace Pokedex_C_Sharp
 
         Conexion miConexion = new Conexion();
         DataTable misPokemons = new DataTable();
-        int idActual = 1;//el pokemon que estamos viendo
+        public static int idActual = 1;//el pokemon que estamos viendo
         public VentanaPrincipal()
         {
             InitializeComponent();
-            pokeInf(1);   
+            pokeInf(1);
         }
         public void pokeInf(int id)
         {
@@ -90,6 +91,10 @@ namespace Pokedex_C_Sharp
             pokeInf(idActual);
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Data ventana = new Data(this);
+            ventana.Show();
+        }
     }
 }

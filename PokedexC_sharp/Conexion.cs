@@ -34,5 +34,24 @@ namespace Pokedex_C_Sharp
                 throw e;
             }
         }
+
+
+        public DataTable getTodos()
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT id, nombre, especie ,habitat FROM pokemon ", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable pokemons = new DataTable();
+                pokemons.Load(resultado);
+                conexion.Close();
+                return pokemons;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
 }
