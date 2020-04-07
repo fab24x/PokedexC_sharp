@@ -46,6 +46,7 @@
             this.der2 = new System.Windows.Forms.Button();
             this.izq2 = new System.Windows.Forms.Button();
             this.data = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -256,12 +257,30 @@
             this.data.UseVisualStyleBackColor = false;
             this.data.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(45, 354);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "B";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PokedexC_sharp.Properties.Resources.pokedex2;
             this.ClientSize = new System.Drawing.Size(614, 451);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.data);
             this.Controls.Add(this.izq2);
             this.Controls.Add(this.der2);
@@ -306,6 +325,7 @@
         private System.Windows.Forms.Button der2;
         private System.Windows.Forms.Button izq2;
         private System.Windows.Forms.Button data;
+        private System.Windows.Forms.Button button1;
     }
 }
 

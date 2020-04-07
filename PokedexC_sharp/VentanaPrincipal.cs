@@ -96,5 +96,11 @@ namespace Pokedex_C_Sharp
             Data ventana = new Data(this);
             ventana.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Buscador ventana = new Buscador(this);
+            ventana.Show();
+        }
     }
 }
